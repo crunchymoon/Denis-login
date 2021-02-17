@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --color-primary: #3f3d56;
+    --color-secondary: #f2ff63;
+    --color-lightgray: #d0cde1;
+    --color-text-heading: #17133D;
+    --color-text: #66647C;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    flex-direction: row;
+    overflow: hidden;
+}
+.panel__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 65%;
+    padding: 0 5rem;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.panel__container h2 {
+    color: var(--color-text-heading);
+}
+.panel__text-container{
+    transition: 1s;
+    position: absolute;
+}
+
+.panel__text {
+    margin-top: 1rem;
+}
+.text2{
+    opacity: 0;
+}
+
+/*
+.panel__container img {
+    width: 90%;
+}
+*/
+.panel__img{
+    width: 78%;
+    position: absolute;
+    bottom: 0;
+    left: 11%;
+    transition-duration: 1s;
+}
+.panel__img1{
+    z-index: 1;
+}
+.panel__img2{
+    z-index: 0;
+    opacity: 1;
+    transform: translateX(140vw);
+}
+
+.form__container {
+    position: relative;
+    width: 35%;
+    background-color: var(--color-primary);
+    transition-duration: 1s;
+/*    transform:translateX(-10%);*/
+}
+.form__input {
+    position: absolute;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    color: azure;
+    padding: 4rem;
+    transition-duration: 1s;
+}
+.form__required{
+    text-align: left;
+    color: coral;
+    display: none;
+}
+#logIn{
+    z-index: -1;
+    opacity: 1;
+    transform: translateX(-500%);
+}
+#signUp{
+    opacity: 1;
+}
+
+
+.form__input h2 {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.form__input-withicon {
+    margin-bottom: 0.7rem;
+}
+
+.form__input-withicon,
+.form__input input {
+    width: 100%;
+    height: 2.5rem;
+    position: relative;
+}
+
+.form__input input {
+    border: none;
+    border-radius: 0.6vw;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.form__input input:focus {
+    outline: none;
+}
+
+.form__input-withicon [type=text],
+[type=password] {
+    padding-left: 3rem;
+}
+
+.form__input .icon {
+    color: var(--color-text);
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 2%;
+    font-size: 1.3rem;
+}
+
+.form__input input[type=button] {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.form__social-text {
+    margin-top: 1rem;
+}
+
+.form__social-media i {
+    color: var(--color-secondary);
+    margin: 0 1.2rem;
+}
+
+.form__text {
+    margin-top: 1rem;
+}
+
+.form__link {
+    color: white;
+}
+
+/*ANIMATIONS*/
+.movie .panel__img1{
+    transform: translateX(-100vw);
+    transition-duration: 2s;
+}
+.movie .form__container{    
+    transition-duration: .8s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease;
+    transform:translateX(-65vw);
+}
+.movie #signUp{
+    animation-name: formMove;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+@keyframes formMove{
+    0%{transform:translateX(0%)}
+    20%{transform: translateX(-10%)}
+    100%{transform: translateX(600%);}
+}
+.movie #logIn{
+    animation-name: formlog;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+@keyframes formlog{
+    0%{transform:translateX(-500%)}
+    40%{transform: translateX(-200%)}
+    80%{transform: translateX(5%)}
+    100%{transform: translateX(0%);}
+}
+
+
+.movie .panel__img2{
+    transform: translateX(40vw);
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
+}
+.movie .panel__text-container{
+    transform: translateX(29vw);
+    transition-duration: .8s;
+    transition-delay: 0.45s;
+    transition-timing-function: ease;
+}
+
+.movie .text2{
+/*    transition-delay: 0.3s;*/
+    opacity: 1;
+}
+.movie .text1{
+    opacity: 0;
+}
+
+@media (max-width: 870px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .panel__container{
+        height: 100%;
+        width: 100%
+    }
+    .form__container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form__input{
+        padding: 2rem;
+        width: 65%;
+        justify-content: center;
+    }
+    .form__input input[type=button]{
+       min-height: 2.5rem; 
+    }
+    .form__social-text{
+        margin-top: 0.2rem;
+    }
+    .form__text{
+        margin-top: 0.2rem;
+    }
+    .panel__img{
+        left:0;
+        width:55%;
+    }
+    .panel__text-container{
+        right: 1rem;
+        width: 40%
+    }
+    .panel__img2{
+    right: 500px;
+    z-index: 0;
+    opacity: 1;
+    transform: translateY(100vh);
+}
+    .movie .panel__img1{
+    transform: translateY(-100vh);
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+    .movie .panel__img2{
+    transform: translateY(50vh);
+    transition-duration: 1.2s;
+    transition-timing-function: ease-in-out;
+}
+.movie .form__container{    
+    transition-duration: .8s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease;
+    transform:translateY(-50vh);
+}
+.movie .panel__text-container{
+    transform: translateY(50vh);
+    transition-duration: .7s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.movie .text2{
+/*    transition-delay: 0.3s;*/
+    opacity: 1;
+}
+.movie .text1{
+    opacity: 0;
+}
+    
+}
+@media (max-width: 570px){
+    body{
+        min-width: 330px;
+    }
+    .panel__container{
+        display: none;
+    }
+    .form__input{
+        width: 85%;
+    }
+    .movie .form__container{    
+    transition-duration: 0;
+    transition-timing-function: ease;
+    transform:translateY(0);
+}
+    .movie #signUp{
+        animation: none;
+        transform: translateX(100vw);
+    }
+    #logIn{
+        transform: translateX(-100vw);
+    }
+    .movie #logIn{
+        animation: none;
+        transform: translateX(0%);
+    }
+    
+}
+

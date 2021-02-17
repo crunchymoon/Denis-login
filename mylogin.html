@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mylogin.css">
+    <script src="http://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymus"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel__container">
+            <div class="panel__text-container text1">
+                <h2 class="panel__text panel__h">Welcome here!</h2>
+                <p class="panel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur alias repellendus rerum, dolores veniam! Laboriosam?</p>
+            </div>
+            <div class="panel__text-container text2">
+                <h2 class="panel__text panel__h">Good to see you!</h2>
+                <p class="panel__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur alias repellendus rerum, dolores veniam! Laboriosam?</p>
+            </div>
+            <img src="img/sign-up.svg" alt="" class="panel__img panel__img1">
+            <img src="img/login.svg" alt="" class="panel__img panel__img2">
+        </div>
+        <div class="form__container">
+            <form class="form__input" id="signUp" action="#">
+                <h2>Sign Up</h2>
+                <div class="form__input-account">
+                    <span class="form__required">Type minimum 6 characters!</span>
+                    <div class="form__input-withicon">
+                        <i class="icon far fa-user-circle"></i>
+                        <input type="text" autofocus placeholder="Create Account">
+                    </div>
+                </div>
+                <div class="form__input-pw">
+                    <span class="form__required">Type minimum 6 characters!</span>
+                    <div class="form__input-withicon">
+                        <i class="icon fas fa-key"></i>
+                        <input type="password" value="pass">
+                    </div>
+                </div>
+                <input type="button" value="Sign Up">
+                <p class="form__social-text">OR <br>sign up with social platforms: </p>
+                <div class="form__social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="form__text">
+                    <a href="#" class="form__link" id="linkLoginAccount">Already have an account? Login here</a>
+                </p>
+            </form>
+
+            <form class="form__input" id="logIn" action="#">
+                <h2>Login</h2>
+                <div class="form__input-withicon">
+                    <i class="icon far fa-user-circle"></i>
+                    <input type="text" autofocus placeholder="Login">
+                </div>
+                <div class="form__input-withicon">
+                    <i class="icon fas fa-key"></i>
+                    <input type="password" value="password">
+                </div>
+                <input type="button" value="Login">
+                <p class="form__social-text">OR <br>Login with social platforms: </p>
+                <div class="form__social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="form__text">
+                    <a href="#" class="form__link" id="linkCreateAccount">New here? Create an account.</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="mylogin.js"></script>
+</body>
